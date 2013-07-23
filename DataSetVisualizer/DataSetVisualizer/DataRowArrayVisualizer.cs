@@ -1,15 +1,17 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualStudio.DebuggerVisualizers;
 using System.Windows.Forms;
 using System.Data;
 using System.Runtime.Serialization.Formatters.Binary;
+using DataSetVisualizer;
+using DataSetVisualizer.ObjectSource;
+using DataSetVisualizer.Forms;
 
 [assembly: System.Diagnostics.DebuggerVisualizer(
-		    typeof(DataSetVisualizer.DataRowArrayVisualizer),
-		    typeof(DataSetVisualizer.DataRowVisualizerObjectSource),
+		    typeof(DataRowArrayVisualizer),
+			typeof(DataRowVisualizerObjectSource),
 			Target = typeof(DataRow[]),
 			Description = "My Data Row Visualizer")]
 
