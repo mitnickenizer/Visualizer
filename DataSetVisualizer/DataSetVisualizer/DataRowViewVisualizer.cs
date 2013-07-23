@@ -5,10 +5,13 @@ using Microsoft.VisualStudio.DebuggerVisualizers;
 using System.Windows.Forms;
 using System.Data;
 using System.Runtime.Serialization.Formatters.Binary;
+using DataSetVisualizer;
+using DataSetVisualizer.ObjectSource;
+using DataSetVisualizer.Forms;
 
 [assembly: System.Diagnostics.DebuggerVisualizer(
-		    typeof(DataSetVisualizer.DataRowViewVisualizer),
-		    typeof(DataSetVisualizer.DataRowVisualizerObjectSource),
+		    typeof(DataRowViewVisualizer),
+			typeof(DataRowVisualizerObjectSource),
 			Target = typeof(System.Data.DataRowView),
 			Description = "My Data Row Visualizer")]
 

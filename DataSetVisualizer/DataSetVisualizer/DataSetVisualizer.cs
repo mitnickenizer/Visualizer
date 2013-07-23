@@ -7,6 +7,8 @@ using System.Data;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
+using DataSetVisualizer.ObjectSource;
+using DataSetVisualizer.Forms;
 
 [assembly: System.Diagnostics.DebuggerVisualizer(
 			typeof(DataSetVisualizer.DataSetVisualizer),

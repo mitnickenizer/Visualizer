@@ -10,11 +10,14 @@ using System.Threading;
 using System.IO;
 using System.Reflection;
 using System.ComponentModel.Design;
+using DataSetVisualizer;
+using DataSetVisualizer.ObjectSource;
+using DataSetVisualizer.Forms;
 
 
 [assembly: System.Diagnostics.DebuggerVisualizer(
-			typeof(DataSetVisualizer.IENumerableVisualizer),
-			typeof(DataSetVisualizer.ListVisualizerObjectSource),
+			typeof(IENumerableVisualizer),
+			typeof(ListVisualizerObjectSource),
 			Target = typeof(List<>),
 			Description = "My List Visualizer")]
 

@@ -7,10 +7,13 @@ using System.Data;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
+using DataSetVisualizer;
+using DataSetVisualizer.ObjectSource;
+using DataSetVisualizer.Forms;
 
 [assembly: System.Diagnostics.DebuggerVisualizer(
-			typeof(DataSetVisualizer.DataViewVisualizer),
-			typeof(DataSetVisualizer.DataViewVisualizerObjectSource),
+			typeof(DataViewVisualizer),
+			typeof(DataViewVisualizerObjectSource),
 			Target = typeof(System.Data.DataView),
 			Description = "My Data View Visualizer")]
 

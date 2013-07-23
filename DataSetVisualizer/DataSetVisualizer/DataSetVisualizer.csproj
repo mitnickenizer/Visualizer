@@ -64,35 +64,35 @@
     <Compile Include="ListVisualizer.cs" />
     <Compile Include="DataRowViewVisualizer.cs" />
     <Compile Include="DataRowVisualizer.cs" />
-    <Compile Include="DataRowVisualizerObjectSource.cs" />
+    <Compile Include="Object Source\DataRowVisualizerObjectSource.cs" />
     <Compile Include="DataSetVisualizer.cs" />
     <Compile Include="DataTableVisualizer.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataViewVisualizer.cs" />
-    <Compile Include="DataViewVisualizerObjectSource.cs">
+    <Compile Include="Object Source\DataViewVisualizerObjectSource.cs">
     </Compile>
-    <Compile Include="DSVisualizer.cs">
+    <Compile Include="Visualizer Forms\DSVisualizer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DSVisualizer.Designer.cs">
+    <Compile Include="Visualizer Forms\DSVisualizer.Designer.cs">
       <DependentUpon>DSVisualizer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListVisualizerObjectSource.cs" />
+    <Compile Include="Object Source\ListVisualizerObjectSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Visualizer.cs">
+    <Compile Include="Visualizer Forms\Visualizer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visualizer.Designer.cs">
+    <Compile Include="Visualizer Forms\Visualizer.Designer.cs">
       <DependentUpon>Visualizer.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSVisualizer.resx">
+    <EmbeddedResource Include="Visualizer Forms\DSVisualizer.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DSVisualizer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visualizer.resx">
+    <EmbeddedResource Include="Visualizer Forms\Visualizer.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Visualizer.cs</DependentUpon>
     </EmbeddedResource>

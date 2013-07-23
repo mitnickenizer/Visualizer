@@ -7,9 +7,12 @@ using System.Data;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
+using DataSetVisualizer;
+using DataSetVisualizer.ObjectSource;
+using DataSetVisualizer.Forms;
 
 [assembly: System.Diagnostics.DebuggerVisualizer(
-			typeof(DataSetVisualizer.DataTableVisualizer),
+			typeof(DataTableVisualizer),
 			typeof(VisualizerObjectSource),
 			Target = typeof(System.Data.DataTable),
 			Description = "My Data Table Visualizer")]
