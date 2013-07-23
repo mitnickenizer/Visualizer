@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Reflection;
 using System.ComponentModel.Design;
 
-namespace DataSetVisualizer
+namespace DataSetVisualizer.ObjectSource
 {
 	class ListVisualizerObjectSource : VisualizerObjectSource
 	{

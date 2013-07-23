@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.DebuggerVisualizers;
 using System.Data;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace DataSetVisualizer
+namespace DataSetVisualizer.ObjectSource
 {
 	class DataRowVisualizerObjectSource : VisualizerObjectSource
 	{

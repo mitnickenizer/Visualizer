@@ -1,6 +1,6 @@
-namespace DataSetVisualizer
+namespace DataSetVisualizer.Forms
 {
-	partial class Visualizer
+	partial class DSVisualizer
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,50 +29,59 @@ namespace DataSetVisualizer
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this._dgvOnly = new System.Windows.Forms.DataGridView();
+			this._tableList = new System.Windows.Forms.ComboBox();
 			this._txtFilter = new System.Windows.Forms.TextBox();
 			this._btnFilter = new System.Windows.Forms.Button();
+			this._dgvView = new System.Windows.Forms.DataGridView();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			((System.ComponentModel.ISupportInitialize)(this._dgvOnly)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this._dgvView)).BeginInit();
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// _dgvOnly
+			// _tableList
 			// 
-			this._dgvOnly.AllowUserToAddRows = false;
-			this._dgvOnly.AllowUserToDeleteRows = false;
-			this._dgvOnly.AllowUserToOrderColumns = true;
-			this._dgvOnly.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-						| System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
-			this._dgvOnly.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this._dgvOnly.ContextMenuStrip = this.contextMenuStrip1;
-			this._dgvOnly.Location = new System.Drawing.Point(12, 38);
-			this._dgvOnly.Name = "_dgvOnly";
-			this._dgvOnly.Size = new System.Drawing.Size(517, 212);
-			this._dgvOnly.TabIndex = 0;
+			this._tableList.FormattingEnabled = true;
+			this._tableList.ImeMode = System.Windows.Forms.ImeMode.Off;
+			this._tableList.Location = new System.Drawing.Point(13, 13);
+			this._tableList.Name = "_tableList";
+			this._tableList.Size = new System.Drawing.Size(166, 21);
+			this._tableList.TabIndex = 0;
+			this._tableList.SelectedIndexChanged += new System.EventHandler(this._tableList_SelectedIndexChanged);
 			// 
 			// _txtFilter
 			// 
-			this._txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
-			this._txtFilter.Location = new System.Drawing.Point(12, 12);
+			this._txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this._txtFilter.Location = new System.Drawing.Point(185, 14);
 			this._txtFilter.Name = "_txtFilter";
-			this._txtFilter.Size = new System.Drawing.Size(436, 20);
+			this._txtFilter.Size = new System.Drawing.Size(377, 20);
 			this._txtFilter.TabIndex = 1;
 			// 
 			// _btnFilter
 			// 
 			this._btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this._btnFilter.Location = new System.Drawing.Point(454, 9);
+			this._btnFilter.Location = new System.Drawing.Point(568, 11);
 			this._btnFilter.Name = "_btnFilter";
 			this._btnFilter.Size = new System.Drawing.Size(75, 23);
 			this._btnFilter.TabIndex = 2;
 			this._btnFilter.Text = "Apply Filter";
 			this._btnFilter.UseVisualStyleBackColor = true;
 			this._btnFilter.Click += new System.EventHandler(this._btnFilter_Click);
+			// 
+			// _dgvView
+			// 
+			this._dgvView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this._dgvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this._dgvView.ContextMenuStrip = this.contextMenuStrip1;
+			this._dgvView.Cursor = System.Windows.Forms.Cursors.Default;
+			this._dgvView.Location = new System.Drawing.Point(13, 40);
+			this._dgvView.Name = "_dgvView";
+			this._dgvView.Size = new System.Drawing.Size(630, 210);
+			this._dgvView.TabIndex = 3;
 			// 
 			// contextMenuStrip1
 			// 
@@ -98,17 +107,18 @@ namespace DataSetVisualizer
 			this.copyToolStripMenuItem.Text = "Copy";
 			this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
 			// 
-			// Visualizer
+			// DSVisualizer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(541, 262);
+			this.ClientSize = new System.Drawing.Size(655, 262);
+			this.Controls.Add(this._dgvView);
 			this.Controls.Add(this._btnFilter);
 			this.Controls.Add(this._txtFilter);
-			this.Controls.Add(this._dgvOnly);
-			this.Name = "Visualizer";
-			this.Text = "Visualizer";
-			((System.ComponentModel.ISupportInitialize)(this._dgvOnly)).EndInit();
+			this.Controls.Add(this._tableList);
+			this.Name = "DSVisualizer";
+			this.Text = "Data Set Visualizer";
+			((System.ComponentModel.ISupportInitialize)(this._dgvView)).EndInit();
 			this.contextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -117,9 +127,10 @@ namespace DataSetVisualizer
 
 		#endregion
 
-		private System.Windows.Forms.DataGridView _dgvOnly;
+		private System.Windows.Forms.ComboBox _tableList;
 		private System.Windows.Forms.TextBox _txtFilter;
 		private System.Windows.Forms.Button _btnFilter;
+		private System.Windows.Forms.DataGridView _dgvView;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
